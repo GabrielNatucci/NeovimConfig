@@ -20,8 +20,9 @@ return {
       return opts
     end,
   },
+
   -- You can disable default plugins as follows:
-  -- { "max397574/better-escape.nvim", enabled = false },
+  { "nvim-neo-tree/neo-tree.nvim", enabled = false }, -- para desativar o explorador de arquivos padrao
   --
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   -- {

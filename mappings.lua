@@ -27,6 +27,55 @@ return {
       end,
       desc = "Pick to close",
     },
+    -- TROUBLE NVIM --
+    ["<leader>xx"] = {
+      function() require("trouble").toggle() end,
+    },
+    ["<leader>xw"] = {
+      function() require("trouble").toggle "workspace_diagnostics" end,
+      desc = "Workspace Diagnostics",
+    },
+    ["<leader>xd"] = {
+      function() require("trouble").toggle "document_diagnostics" end,
+      desc = "Document Diagnostics",
+    },
+    ["<leader>xq"] = {
+      function() require("trouble").toggle "quickfix" end,
+      desc = "Quickfix",
+    },
+    ["<leader>xl"] = {
+      function() require("trouble").toggle "loclist" end,
+      desc = "Location List",
+    },
+    -- COMPILAR E RODAR --
+    ["<leader>;"] = { name = "Compile & run" },
+    ["<leader>;c"] = {
+      function() vim.cmd [[CompilerOpen]] end,
+      desc = "Compiler Open",
+    },
+    ["<leader>;r"] = {
+      function() require("executor").commands.run() end,
+      desc = "Executor Run",
+    },
+    ["<leader>;s"] = {
+      function() require("executor").commands.set_command() end,
+      desc = "Set Command",
+    },
+    ["<leader>;p"] = {
+      function() require("executor").commands.show_presets() end,
+      desc = "Presets",
+    },
+    ["<leader>;d"] = {
+      function() require("executor").commands.toggle_detail() end,
+      desc = "Detail",
+    },
+    -- EXPLORADOR DE ARQUIVOS
+    ["<leader>e"] = {
+      function() vim.cmd [[:NvimTreeToggle]] end,
+      desc = "File explorer",
+    },
+    -- nnoremap <leader>e :NvimTreeToggle<CR>
+
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
