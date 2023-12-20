@@ -69,13 +69,12 @@ return {
       function() require("executor").commands.toggle_detail() end,
       desc = "Detail",
     },
-    -- EXPLORADOR DE ARQUIVOS
+    -- FILE EXPLORER
     ["<leader>e"] = {
       function() vim.cmd [[:NvimTreeToggle]] end,
       desc = "File explorer",
     },
-    -- nnoremap <leader>e :NvimTreeToggle<CR>
-
+    -- SEARCH AND REPLACE
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
