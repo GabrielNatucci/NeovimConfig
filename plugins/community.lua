@@ -5,12 +5,12 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   { import = "astrocommunity.pack.html-css" },
-  { import = "astrocommunity.pack.python" },
+  -- { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.typescript" },
-  { import = "astrocommunity.pack.cpp" },
+  -- { import = "astrocommunity.pack.cpp" },
   -- { import = "astrocommunity.pack.cmake" },
   { import = "astrocommunity.pack.java" },
-  { import = "astrocommunity.pack.lua" },
+  -- { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.code-runner.compiler-nvim" },
   { import = "astrocommunity.code-runner.executor-nvim" },
