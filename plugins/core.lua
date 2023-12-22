@@ -23,6 +23,7 @@ return {
 
   -- You can disable default plugins as follows:
   { "nvim-neo-tree/neo-tree.nvim", enabled = false }, -- para desativar o explorador de arquivos padrao
+  { "rebelot/heirline.nvim", enabled = false }, -- para desativar o explorador de arquivos padrao
   --
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   -- {
