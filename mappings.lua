@@ -86,6 +86,12 @@ return {
       function() require("telescope.builtin").find_files() end,
       desc = "Find files",
     },
+    -- REMAPS UTEIS
+    ["<C-u>"] = { "<C-u>zz", desc = "New Horizontal Window" },
+    ["<C-d>"] = { "<C-d>zz", desc = "New Horizontal Window" },
+    ["n"] = { "nzz", desc = "New Horizontal Window" },
+    ["N"] = { "Nzz", desc = "New Horizontal Window" },
+    --
   },
   t = {
     -- setting a mapping to false will disable it
