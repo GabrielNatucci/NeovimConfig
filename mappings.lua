@@ -79,18 +79,26 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     -- ATALHOS PARA SEPRACAO DE JANELA
-    ["<C-s>"] = { ":split<cr>", desc = "New Horizontal Window" },
-    ["<C-g>"] = { ":vsplit<cr>", desc = "New Vertical Window" },
+    -- ["<C-s>"] = { ":split<cr>", desc = "New Horizontal Window" },
     -- ATALHO PARA PROCURAR ARQUIVO
     ["<C-f>"] = {
       function() require("telescope.builtin").find_files() end,
       desc = "Find files",
     },
     -- REMAPS UTEIS
-    ["<C-u>"] = { "<C-u>zz", desc = "New Horizontal Window" },
-    ["<C-d>"] = { "<C-d>zz", desc = "New Horizontal Window" },
-    ["n"] = { "nzz", desc = "New Horizontal Window" },
-    ["N"] = { "Nzz", desc = "New Horizontal Window" },
+    ["<C-u>"] = { "<C-u>zz" },
+    ["<C-d>"] = { "<C-d>zz" },
+    ["<C-'>"] = { "<C-6>" },
+    ["n"] = { "nzz" },
+    ["N"] = { "Nzz" },
+    ["<C-g>"] = {
+      function()
+        local worktree = require("astronvim.utils.git").file_worktree()
+        local flags = worktree and (" --work-tree=%s --git-dir=%s"):format(worktree.toplevel, worktree.gitdir) or ""
+        require("astronvim.utils").toggle_term_cmd("lazygit " .. flags)
+      end,
+      desc = "ToggleTerm lazygit",
+    },
     --
   },
   t = {
