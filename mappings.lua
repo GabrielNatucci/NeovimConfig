@@ -81,6 +81,11 @@ return {
     -- ATALHOS PARA SEPRACAO DE JANELA
     ["<C-s>"] = { ":split<cr>", desc = "New Horizontal Window" },
     ["<C-g>"] = { ":vsplit<cr>", desc = "New Vertical Window" },
+    -- ATALHO PARA PROCURAR ARQUIVO
+    ["<C-f>"] = {
+      function() require("telescope.builtin").find_files() end,
+      desc = "Find files",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
