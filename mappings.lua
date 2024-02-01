@@ -49,7 +49,10 @@ return {
     },
     -- COMPILAR E RODAR --
     ["<leader>;"] = { name = "Compile & run" },
-    ["<leader>;o"] = { name = "Open Panel" },
+    ["<leader>;o"] = {
+      function() vim.cmd [[CompilerToggleResults]] end,
+      desc = "Compiler Results Toggle Open",
+    },
     ["<leader>;c"] = {
       function() vim.cmd [[CompilerOpen]] end,
       desc = "Compiler Open",
