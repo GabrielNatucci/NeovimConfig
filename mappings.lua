@@ -49,6 +49,7 @@ return {
     },
     -- COMPILAR E RODAR --
     ["<leader>;"] = { name = "Compile & run" },
+    ["<leader>;o"] = { name = "Open Panel" },
     ["<leader>;c"] = {
       function() vim.cmd [[CompilerOpen]] end,
       desc = "Compiler Open",
@@ -88,9 +89,9 @@ return {
     -- REMAPS UTEIS
     ["<C-u>"] = { "<C-u>zz" },
     ["<C-d>"] = { "<C-d>zz" },
-    ["<c-[>"] = { "<C-6>" },
-    ["n"] = { "nzz" },
-    ["N"] = { "Nzz" },
+    ["<leader>a"] = { "<C-6>", desc = "Open Last File"},
+    ["n"] = { "nzz" }, 
+    ["N"] = { "Nzz" }, 
     ["<C-g>"] = {
       function()
         local worktree = require("astronvim.utils.git").file_worktree()
