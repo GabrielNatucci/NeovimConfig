@@ -103,7 +103,21 @@ return {
       end,
       desc = "ToggleTerm lazygit",
     },
-    --
+    -- react-extract
+    ["<leader>rn"] = {
+      function()
+        require("react-extract").extract_to_new_file()
+      end,
+      desc = "React extract to new file",
+    },
+    ["<leader>rc"] = {
+      function()
+        require("react-extract").extract_to_current_file()
+      end,
+      desc = "React extract to current file",
+    },
+    ["<leader>r"] = { name = "React Extract" },
+
   },
   t = {
     -- setting a mapping to false will disable it
