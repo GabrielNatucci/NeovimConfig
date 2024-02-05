@@ -103,6 +103,13 @@ return {
       end,
       desc = "ToggleTerm lazygit",
     },
+
+  },
+  t = {
+    -- setting a mapping to false will disable it
+    -- ["<esc>"] = false,
+  },
+  v = {
     -- react-extract
     ["<leader>rn"] = {
       function()
@@ -117,10 +124,5 @@ return {
       desc = "React extract to current file",
     },
     ["<leader>r"] = { name = "React Extract" },
-
-  },
-  t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
   },
 }
