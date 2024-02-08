@@ -25,6 +25,7 @@ return {
   { "nvim-neo-tree/neo-tree.nvim", enabled = false }, -- para desativar o explorador de arquivos padrao
   { "rebelot/heirline.nvim", enabled = false }, 
   { "max397574/better-escape.nvim", enabled = false }, 
+  { "goolord/alpha-nvim", enabled = false }, 
   -- { "echasnovski/mini.bufremove", enabled = false }, 
   -- { "s1n7ax/nvim-window-picker", enabled = false }, 
   -- { "NMAC427/guess-indent.nvim", enabled = false }, 

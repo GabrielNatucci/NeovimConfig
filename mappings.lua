@@ -103,11 +103,10 @@ return {
       end,
       desc = "ToggleTerm lazygit",
     },
-
+    ["<leader>h"] = false,
   },
   t = {
     -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
   },
   v = {
     -- react-extract
