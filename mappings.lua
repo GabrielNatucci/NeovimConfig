@@ -103,7 +103,20 @@ return {
       end,
       desc = "ToggleTerm lazygit",
     },
-    ["<leader>h"] = false,
+    ["<leader>ha"] = {
+        function() 
+            vim.cmd [[:lua require("harpoon.mark").add_file()]] 
+            print("Arquivo adicionado")
+        end,
+      desc = "Add File",
+    },
+    ["<leader>hq"] = {
+      function() vim.cmd [[:lua require("harpoon.ui").toggle_quick_menu()]] end,
+      desc = "Quick Menu",
+    },
+    ["<leader>h"] = {
+      name = "Harpoon",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
@@ -111,15 +124,11 @@ return {
   v = {
     -- react-extract
     ["<leader>rn"] = {
-      function()
-        require("react-extract").extract_to_new_file()
-      end,
+      function() vim.cmd [[:lua require("react-extract").extract_to_new_file()]] end,
       desc = "React extract to new file",
     },
     ["<leader>rc"] = {
-      function()
-        require("react-extract").extract_to_current_file()
-      end,
+      function() vim.cmd[[require("react-extract").extract_to_current_file() ]] end,
       desc = "React extract to current file",
     },
     ["<leader>r"] = { name = "React Extract" },
